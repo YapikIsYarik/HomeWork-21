@@ -26,9 +26,9 @@ function Contracts(data) {
     }
    const searchFilter = () => {
        return contacts.data.filter((contact) => {
-           if (contact.firstName.toLowerCase().includes(inputValue)
-               || contact.lastName.toLowerCase().includes(inputValue)
-               ||contact.phone.toLowerCase().includes(inputValue)
+           if (contact.firstName.toLowerCase().includes(inputValue.toLowerCase())
+               || contact.lastName.toLowerCase().includes(inputValue.toLowerCase())
+               ||contact.phone.toLowerCase().includes(inputValue.toLowerCase())
            ){
                return (contact);
            }
@@ -47,50 +47,53 @@ function Contracts(data) {
                                 <input onChange={handleInputChange} className='search' type="text"/>
                                 <img className='search-icon' src={searchIcon} alt="search-icon"/>
                             </div>
-                            <div className="male checkbox">
-                                <p>Ч</p>
-                                <label className="toggler-wrapper style-1">
-                                    <input
-                                        className='gender-checkbox'
-                                        value={'male'}
-                                        onClick={handleGenderChange}
-                                        defaultChecked="checked"
-                                        type="checkbox" />
-                                    <div className="toggler-slider">
-                                        <div className="toggler-knob"></div>
-                                    </div>
-                                </label>
+                            <div className="checkbox-block">
+                                <div className="male checkbox">
+                                    <p>Ч</p>
+                                    <label className="toggler-wrapper style-1">
+                                        <input
+                                            className='gender-checkbox'
+                                            value={'male'}
+                                            onClick={handleGenderChange}
+                                            defaultChecked="checked"
+                                            type="checkbox" />
+                                        <div className="toggler-slider">
+                                            <div className="toggler-knob"></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div className="female checkbox">
+                                    <p>Ж</p>
+                                    <label className="toggler-wrapper style-1">
+                                        <input
+                                            className='gender-checkbox'
+                                            value={'female'}
+                                            onClick={handleGenderChange}
+                                            type="checkbox"
+                                            defaultChecked="checked"
+                                        />
+                                        <div className="toggler-slider">
+                                            <div className="toggler-knob"></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div className="no-gender checkbox">
+                                    <p>Не вказано</p>
+                                    <label  className="toggler-wrapper style-1">
+                                        <input
+                                            className='gender-checkbox'
+                                            value={'unknown'}
+                                            onClick={handleGenderChange}
+                                            type="checkbox"
+                                            defaultChecked="checked"
+                                        />
+                                        <div className="toggler-slider">
+                                            <div className="toggler-knob"></div>
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
-                            <div className="female checkbox">
-                                <p>Ж</p>
-                                <label className="toggler-wrapper style-1">
-                                    <input
-                                        className='gender-checkbox'
-                                        value={'female'}
-                                        onClick={handleGenderChange}
-                                           type="checkbox"
-                                        defaultChecked="checked"
-                                    />
-                                    <div className="toggler-slider">
-                                        <div className="toggler-knob"></div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div className="no-gender checkbox">
-                                <p>Не вказано</p>
-                                <label  className="toggler-wrapper style-1">
-                                    <input
-                                        className='gender-checkbox'
-                                        value={'unknown'}
-                                        onClick={handleGenderChange}
-                                        type="checkbox"
-                                        defaultChecked="checked"
-                                    />
-                                    <div className="toggler-slider">
-                                        <div className="toggler-knob"></div>
-                                    </div>
-                                </label>
-                            </div>
+
                         </header>
                         <div className="contact">
                             {
