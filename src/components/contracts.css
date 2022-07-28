@@ -1,11 +1,12 @@
 .wrapper{
     width: 100%;
-    overflow: hidden;
+    height: 100vh;
+
     padding: 5px;
 }
 .container{
-    max-width: 1440px;
-    height: 100vh;
+    max-width: 1000px;
+
     margin: 0 auto;
     display: flex;
 flex-direction: column;
@@ -26,7 +27,6 @@ align-items: center;
     }
 
 }
-
 .checkbox-block{
     display: flex;
 }
@@ -63,13 +63,10 @@ align-items: center;
     height: 25px;
     cursor: pointer;
     position: relative;
-
 }
-
 .toggler-wrapper input[type="checkbox"] {
     display: none;
 }
-
 .toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
     background-color: #44cc66;
 }
@@ -86,18 +83,14 @@ align-items: center;
     transition: all 300ms ease;
 
 }
-
 .toggler-wrapper .toggler-knob {
     position: absolute;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
 }
-
-
 .toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
     left: calc(100% - 19px - 3px);
 }
-
 .toggler-wrapper.style-1 .toggler-knob {
     width: calc(25px - 6px);
     height: calc(25px - 6px);
@@ -108,6 +101,7 @@ align-items: center;
 }
 
 /*/////////////////////////////CONTRACT STYLE//////////////////*/
+
 .contract__item{
     width: 400px;
     padding: 20px 10px;
